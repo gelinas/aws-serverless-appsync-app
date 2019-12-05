@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  getWeatherData:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: getWeatherData/index.handler
+      Runtime: nodejs8.10
+      Description: ''
+      MemorySize: 128
+      Timeout: 15
+      Environment:
+       Variables:
+        APPID: 1bbbd329303f567a6d0a6e6ba3f1194b
